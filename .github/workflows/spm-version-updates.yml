@@ -1,0 +1,20 @@
+name: SPM Version Updates
+on:
+  pull_request:
+    paths:
+      - 'JustALine.xcodeproj/**'
+      - '**/Package.resolved'
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  SPMVersionUpdates:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: hbmartin/github-action-spm_version_updates@0.3.0
+        with:
+          xcode-project-path: JustALine.xcodeproj
+          package-resolved-paths: JustALine.xcworkspace/xcshareddata/swiftpm/Package.resolved
