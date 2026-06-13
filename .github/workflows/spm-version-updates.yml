@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: hbmartin/github-action-spm_version_updates@0.3.0
+      - uses: hbmartin/github-action-spm_version_updates@v1.2.0
         with:
           xcode-project-path: JustALine.xcodeproj
           package-resolved-paths: JustALine.xcworkspace/xcshareddata/swiftpm/Package.resolved
